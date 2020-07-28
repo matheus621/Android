@@ -49,7 +49,7 @@ class ClienteRepository(context: Context) {
                         }
                     }
                 }*/
-                database.Dao().insertSimpleUsers(resultado)
+//                database.Dao().insertSimpleUsers(resultado)
             }
 
         })
