@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation.xml"
+    app:startDestination="@id/mainFragment">
+
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="com.example.prova.ui.MainFragment"
+        android:label="maxApp">
+        <action
+            android:id="@+id/action_mainFragment_to_clienteFullFragment"
+            app:destination="@id/clienteFullFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/clienteFullFragment"
+        android:name="com.example.prova.ui.ClienteFullFragment"
+        android:label="Dados do cliente" />
+</navigation>
