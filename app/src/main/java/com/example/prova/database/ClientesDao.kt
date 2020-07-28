@@ -1,11 +1,11 @@
-package com.example.placeholder.database
+package com.example.prova.database
 
 import androidx.lifecycle.LiveData
 import androidx.room.Dao
 import androidx.room.Insert
 import androidx.room.OnConflictStrategy
 import androidx.room.Query
-import com.example.prototipoprova.model.Cliente
+import com.example.prova.model.Cliente
 
 @Dao
 interface ClientesDao {

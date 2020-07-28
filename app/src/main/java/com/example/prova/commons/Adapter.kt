@@ -1,4 +1,4 @@
-package com.example.prototipoprova.commons
+package com.example.prova.commons
 
 import android.view.LayoutInflater
 import android.view.View
@@ -6,9 +6,8 @@ import android.view.ViewGroup
 import androidx.core.os.bundleOf
 import androidx.navigation.findNavController
 import androidx.recyclerview.widget.RecyclerView
-import com.example.prototipoprova.R
-import com.example.prototipoprova.model.Cliente
 import com.example.prova.R
+import com.example.prova.model.Cliente
 import kotlinx.android.synthetic.main.cliente_item.view.*
 
 class Adapter(val dataSet: List<Cliente>) : RecyclerView.Adapter<Adapter.ViewHolder>() {

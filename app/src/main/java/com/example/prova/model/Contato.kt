@@ -1,4 +1,4 @@
-package com.example.prototipoprova.model
+package com.example.prova.model
 
 import androidx.room.ColumnInfo
 import androidx.room.Entity

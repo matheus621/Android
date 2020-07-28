@@ -3,9 +3,9 @@ package com.example.prototipoprova.repository
 import android.content.Context
 import android.util.Log
 import androidx.lifecycle.MutableLiveData
-import com.example.placeholder.database.AppDatabase
 import com.example.prototipoprova.api.ApiService
-import com.example.prototipoprova.model.Cliente
+import com.example.prova.database.AppDatabase
+import com.example.prova.model.Cliente
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
