@@ -1,0 +1,394 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rcy_clientes"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F1ECEC"
+    android:orientation="vertical">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/item_full"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:orientation="vertical"
+        app:cardCornerRadius="8dp"
+        tools:context=".ui.listusers.UsersFullFragment">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="240dp">
+
+
+            <TextView
+                android:id="@+id/textViewDadosCliente"
+                android:layout_width="148dp"
+                android:layout_height="31dp"
+                android:layout_marginTop="10dp"
+                android:text="Dados do cliente"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.064"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textCodigo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="454545"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="@+id/textViewDadosCliente"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/textViewDadosCliente"
+                app:layout_constraintTop_toBottomOf="@+id/textViewDadosCliente" />
+
+            <TextView
+                android:id="@+id/textIfen"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginLeft="10dp"
+                android:text="-"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/textCodigo"
+                app:layout_constraintEnd_toStartOf="@+id/txtRazaoSocial"
+                app:layout_constraintHorizontal_bias="0.152"
+                app:layout_constraintStart_toEndOf="@+id/textCodigo"
+                app:layout_constraintTop_toTopOf="@+id/textCodigo"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <TextView
+                android:id="@+id/txtRazaoSocial"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginStart="20dp"
+                android:layout_marginLeft="10dp"
+                android:text="MAXIMA SISTEMAS"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/textCodigo"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.015"
+                app:layout_constraintStart_toEndOf="@+id/textCodigo"
+                app:layout_constraintTop_toTopOf="@+id/textCodigo"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <TextView
+                android:id="@+id/txtNomeFantasia"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/textCodigo"
+                android:layout_marginTop="8dp"
+                android:text="MAXIMA SISTEMAS"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="@+id/txtRazaoSocial"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/textCodigo"
+                app:layout_constraintTop_toBottomOf="@+id/textCodigo" />
+
+            <TextView
+                android:id="@+id/txtViewCnpj"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:text="CNPJ: "
+                app:layout_constraintEnd_toEndOf="@+id/txtNomeFantasia"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/txtNomeFantasia"
+                app:layout_constraintTop_toBottomOf="@+id/txtNomeFantasia" />
+
+            <TextView
+                android:id="@+id/txtCnpj"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="12dp"
+                android:text="10.766.206/0001-61"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/txtViewCnpj"
+                app:layout_constraintStart_toEndOf="@+id/txtViewCnpj"
+                app:layout_constraintTop_toTopOf="@+id/txtViewCnpj"
+                app:layout_constraintVertical_bias="1.0" />
+
+            <TextView
+                android:id="@+id/txtViewRamoAtividade"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:text="Ramo de atividade: "
+                app:layout_constraintEnd_toEndOf="@+id/txtCnpj"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/txtViewCnpj"
+                app:layout_constraintTop_toBottomOf="@+id/txtViewCnpj" />
+
+            <TextView
+                android:id="@+id/txtRamoAtividade"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginLeft="10dp"
+                android:text="Panificadora"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/txtViewRamoAtividade"
+                app:layout_constraintEnd_toEndOf="@+id/txtCnpj"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toEndOf="@+id/txtViewRamoAtividade"
+                app:layout_constraintTop_toTopOf="@+id/txtViewRamoAtividade"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <TextView
+                android:id="@+id/txtViewEndereco"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:text="Endereços: "
+                app:layout_constraintEnd_toEndOf="@+id/txtViewRamoAtividade"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/txtViewRamoAtividade"
+                app:layout_constraintTop_toBottomOf="@+id/txtViewRamoAtividade" />
+
+            <TextView
+                android:id="@+id/txtEndereco"
+                android:layout_width="186dp"
+                android:layout_height="19dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginLeft="10dp"
+                android:text="Rua Agenor Lopes...."
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/txtViewEndereco"
+                app:layout_constraintEnd_toEndOf="@+id/txtRamoAtividade"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toEndOf="@+id/txtViewEndereco"
+                app:layout_constraintTop_toTopOf="@+id/txtViewEndereco"
+                app:layout_constraintVertical_bias="0.0" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/item_full_contato"
+        android:layout_width="match_parent"
+        android:layout_height="287dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:orientation="vertical"
+        app:cardCornerRadius="8dp"
+        tools:context=".ui.listusers.UsersFullFragment">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="277dp">
+
+
+            <TextView
+                android:id="@+id/textViewContato"
+                android:layout_width="148dp"
+                android:layout_height="31dp"
+                android:layout_marginTop="10dp"
+                android:text="Contatos"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.064"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textNome"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="MAXIMA SISTEMAS"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="@+id/textViewContato"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/textViewContato"
+                app:layout_constraintTop_toBottomOf="@+id/textViewContato" />
+
+            <TextView
+                android:id="@+id/txtViewTelefone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:text="Telefone: "
+                app:layout_constraintEnd_toEndOf="@+id/textNome"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/textNome"
+                app:layout_constraintTop_toBottomOf="@+id/textNome" />
+
+            <TextView
+                android:id="@+id/txtTelefone"
+                android:layout_width="82dp"
+                android:layout_height="19dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginLeft="10dp"
+                android:text="98989989+"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/txtViewTelefone"
+                app:layout_constraintStart_toEndOf="@+id/txtViewTelefone"
+                app:layout_constraintTop_toTopOf="@+id/txtViewTelefone" />
+
+            <TextView
+                android:id="@+id/txtViewCelular"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:text="Celular: "
+                app:layout_constraintEnd_toEndOf="@+id/txtViewTelefone"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/txtViewTelefone"
+                app:layout_constraintTop_toBottomOf="@+id/txtViewTelefone" />
+
+            <TextView
+                android:id="@+id/txtCelular"
+                android:layout_width="82dp"
+                android:layout_height="19dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginLeft="10dp"
+                android:text="(62)98989989+"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/txtViewCelular"
+                app:layout_constraintStart_toEndOf="@+id/txtViewCelular"
+                app:layout_constraintTop_toTopOf="@+id/txtViewCelular" />
+
+            <TextView
+                android:id="@+id/txtViewConjuge"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:text="Conjuge: "
+                app:layout_constraintEnd_toEndOf="@+id/txtViewCelular"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/txtViewCelular"
+                app:layout_constraintTop_toBottomOf="@+id/txtViewCelular" />
+
+            <TextView
+                android:id="@+id/txtConjuge"
+                android:layout_width="82dp"
+                android:layout_height="19dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginLeft="10dp"
+                android:text="Florentina"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/txtViewConjuge"
+                app:layout_constraintStart_toEndOf="@+id/txtViewConjuge"
+                app:layout_constraintTop_toTopOf="@+id/txtViewConjuge" />
+
+            <TextView
+                android:id="@+id/txtViewTipo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:text="Tipo: "
+                app:layout_constraintEnd_toEndOf="@+id/txtViewConjuge"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/txtViewConjuge"
+                app:layout_constraintTop_toBottomOf="@+id/txtViewConjuge" />
+
+            <TextView
+                android:id="@+id/txtTipo"
+                android:layout_width="82dp"
+                android:layout_height="19dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginLeft="10dp"
+                android:text="Socio"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/txtViewTipo"
+                app:layout_constraintStart_toEndOf="@+id/txtViewTipo"
+                app:layout_constraintTop_toTopOf="@+id/txtViewTipo" />
+
+            <TextView
+                android:id="@+id/txtViewTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:text="Time: "
+                app:layout_constraintEnd_toEndOf="@+id/txtViewTipo"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/txtViewTipo"
+                app:layout_constraintTop_toBottomOf="@+id/txtViewTipo" />
+
+            <TextView
+                android:id="@+id/txtTime"
+                android:layout_width="82dp"
+                android:layout_height="19dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginLeft="10dp"
+                android:text="Corinthians"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/txtViewTime"
+                app:layout_constraintStart_toEndOf="@+id/txtViewTime"
+                app:layout_constraintTop_toTopOf="@+id/txtViewTime" />
+
+            <TextView
+                android:id="@+id/txtViewDataNascimento"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:text="Data Nasc: "
+                app:layout_constraintBottom_toBottomOf="@+id/txtCelular"
+                app:layout_constraintEnd_toEndOf="@+id/txtViewEmail"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/txtViewEmail"
+                app:layout_constraintTop_toBottomOf="@+id/txtViewEmail" />
+
+            <TextView
+                android:id="@+id/txtDataNascimento"
+                android:layout_width="82dp"
+                android:layout_height="19dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginLeft="10dp"
+                android:text="11/05/1997"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/txtViewDataNascimento"
+                app:layout_constraintStart_toEndOf="@+id/txtViewDataNascimento"
+                app:layout_constraintTop_toTopOf="@+id/txtViewDataNascimento" />
+
+            <TextView
+                android:id="@+id/txtViewEmail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="40dp"
+                android:layout_marginLeft="40dp"
+                android:text="E-mail: "
+                app:layout_constraintBottom_toBottomOf="@+id/txtTelefone"
+                app:layout_constraintStart_toEndOf="@+id/txtTelefone"
+                app:layout_constraintTop_toTopOf="@+id/txtTelefone" />
+
+            <TextView
+                android:id="@+id/txtEmail"
+                android:layout_width="82dp"
+                android:layout_height="19dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginLeft="10dp"
+                android:text="asdaks@sfkasjdk"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/txtViewEmail"
+                app:layout_constraintStart_toEndOf="@+id/txtViewEmail"
+                app:layout_constraintTop_toTopOf="@+id/txtViewEmail" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+
+</LinearLayout>
