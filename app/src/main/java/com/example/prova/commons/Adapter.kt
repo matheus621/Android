@@ -3,8 +3,6 @@ package com.example.prova.commons
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.core.os.bundleOf
-import androidx.navigation.findNavController
 import androidx.recyclerview.widget.RecyclerView
 import com.example.prova.R
 import com.example.prova.model.Cliente
@@ -12,7 +10,7 @@ import kotlinx.android.synthetic.main.cliente_item.view.*
 
 class Adapter(val dataSet: List<Cliente>) : RecyclerView.Adapter<Adapter.ViewHolder>() {
 
-    inner class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
+    class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
 
         fun bindView(clientes: Cliente) {
 
@@ -24,12 +22,13 @@ class Adapter(val dataSet: List<Cliente>) : RecyclerView.Adapter<Adapter.ViewHol
                 txtCnpj.text = clientes.cnpj
                 txtRamoAtividade.text = clientes.ramo_atividade
 
-
-
-                rcy_clientes.setOnClickListener {
-                    val clienteSelectdId = bundleOf("clienteSelectdId" to clientes.id)
-                    findNavController().navigate(R.id.action_mainFragment_to_clienteFullFragment, clienteSelectdId)
-                }
+//                rcy_clientes.setOnClickListener {
+//                   // val clienteSelectdId = bundleOf("clienteSelectdId" to clientes.id)
+////                    findNavController().navigate(
+////                        R.id.action_mainFragment_to_clienteFullFragment,
+////                        clienteSelectdId
+//                    )
+//                }
             }
 
         }
@@ -45,7 +44,11 @@ class Adapter(val dataSet: List<Cliente>) : RecyclerView.Adapter<Adapter.ViewHol
     override fun getItemCount() = dataSet.size
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        holder.bindView(dataSet[position])
+//        holder.bindView(dataSet[position])
+        val list = dataSet[position]
+        holder.let {
+            it.bindView(list)
+        }
 
     }
 }

@@ -7,7 +7,7 @@ object ApiService {
 
     private fun getRetrofit() : Retrofit {
         return Retrofit.Builder()
-            .baseUrl("https://maximatech.free.beeceptor.com/android/")
+            .baseUrl("http://maximatech.free.beeceptor.com/android/")
             .addConverterFactory(GsonConverterFactory.create())
             .build()
     }

@@ -15,6 +15,7 @@
     </fragment>
     <fragment
         android:id="@+id/clienteFullFragment"
-        android:name="com.example.prova.ui.ClienteFullFragment"
-        android:label="Dados do cliente" />
+        android:name="com.example.prova.ui.ClientesFragment"
+        android:label="Dados do cliente"
+        tools:layout="@layout/cliente_fragment" />
 </navigation>

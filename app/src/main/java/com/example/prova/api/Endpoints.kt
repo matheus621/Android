@@ -7,6 +7,6 @@ import retrofit2.http.GET
 interface Endpoints {
 
     @GET("cliente")
-    fun getClientes(): Call<Cliente>
+    fun getClientes(): Call<List<Cliente>>
 
 }

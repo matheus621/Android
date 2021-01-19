@@ -8,9 +8,12 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.lifecycle.Observer
 import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.StaggeredGridLayoutManager
 import com.example.prova.R
 import com.example.prova.commons.Adapter
+import com.example.prova.model.Cliente
 import kotlinx.android.synthetic.main.cliente_fragment.*
+import kotlinx.android.synthetic.main.cliente_item.*
 
 class ClientesFragment : Fragment() {
 
@@ -31,7 +34,9 @@ class ClientesFragment : Fragment() {
 
         viewModel.getAllClientes().observe(this, Observer { clientes ->
             recyclerView.adapter = Adapter(listOf(clientes))
-            recyclerView.layoutManager = LinearLayoutManager(context)
+            val layoutManager = StaggeredGridLayoutManager(2, StaggeredGridLayoutManager.VERTICAL)
+            recyclerView.layoutManager = layoutManager
+
         })
     }
 

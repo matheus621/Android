@@ -8,7 +8,6 @@ import androidx.fragment.app.Fragment
 import androidx.navigation.findNavController
 import com.example.prova.R
 import kotlinx.android.synthetic.main.main_fragment.*
-import kotlinx.android.synthetic.main.teste.*
 
 class MainFragment : Fragment() {
 
@@ -17,7 +16,7 @@ class MainFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        return inflater.inflate(R.layout.teste, container, false)
+        return inflater.inflate(R.layout.main_fragment, container, false)
     }
 
     override fun onResume() {
