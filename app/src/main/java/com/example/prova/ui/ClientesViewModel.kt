@@ -12,7 +12,7 @@ class ClientesViewModel(application: Application) : AndroidViewModel(application
         clienteRepository.fetchDataFromServer(application)
     }
 
-    fun getAllClientes() = clienteRepository.getCliente()
+    fun getAllClientes() = clienteRepository.getAllCliente()
 
 
 }

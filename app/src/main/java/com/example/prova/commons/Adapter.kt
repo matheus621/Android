@@ -44,11 +44,11 @@ class Adapter(val dataSet: List<Cliente>) : RecyclerView.Adapter<Adapter.ViewHol
     override fun getItemCount() = dataSet.size
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-//        holder.bindView(dataSet[position])
-        val list = dataSet[position]
-        holder.let {
-            it.bindView(list)
-        }
+        holder.bindView(dataSet[position])
+//        val list = dataSet[position]
+//        holder.let {
+//            it.bindView(list)
+//        }
 
     }
 }

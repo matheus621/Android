@@ -11,13 +11,13 @@ import com.example.prova.model.Cliente
 interface ClientesDao {
 
     @Query("SELECT * FROM CLIENTES")
-    fun getCliente(): LiveData<Cliente>
+    fun getCliente(): Cliente
 
 //    @Query("SELECT * FROM CLIENTES")
 //    fun getAllLiveCliente(): LiveData<List<Cliente>>
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
-    fun insertSimpleUsers(cliente: Cliente)
+    fun insertClientes(cliente: List<Cliente>)
 
     @Query("SELECT * FROM CLIENTES WHERE ID = :id")
     fun getSimpleCliente(id: Int) : LiveData<Cliente>

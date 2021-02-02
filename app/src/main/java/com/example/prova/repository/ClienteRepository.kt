@@ -16,15 +16,15 @@ import timber.log.Timber
 
 class ClienteRepository(context: Context) {
 
-    val currentClienteSelected: MutableLiveData<Int> by lazy {
-        MutableLiveData<Int>()
-    }
-
-    fun setCurrentClienteSelected(clienteIdSelected: Int) {
-        currentClienteSelected.value = clienteIdSelected
-    }
-
-    fun getSingleClienteDetails(id: Int) = database.Dao().getSimpleCliente(id)
+//    val currentClienteSelected: MutableLiveData<Int> by lazy {
+//        MutableLiveData<Int>()
+//    }
+//
+//    fun setCurrentClienteSelected(clienteIdSelected: Int) {
+//        currentClienteSelected.value = clienteIdSelected
+//    }
+//
+//    fun getSingleClienteDetails(id: Int) = database.Dao().getSimpleCliente(id)
 
     val database = AppDatabase.getInstance(context)
 
@@ -37,11 +37,13 @@ class ClienteRepository(context: Context) {
         val callback = request.getClientes()
 
         callback.enqueue(object : Callback<List<Cliente>> {
+
             override fun onFailure(call: Call<List<Cliente>>, t: Throwable) {
                 Log.e("Falha de comunicação", "Falha no request")
             }
 
             override fun onResponse(call: Call<List<Cliente>>, response: Response<List<Cliente>>) {
+
 
                 if (response.code() == 200) {
                     Timber.d("${response.body()}")
@@ -49,7 +51,7 @@ class ClienteRepository(context: Context) {
                     resultado?.let { cliente ->
                         cliente.forEach {
                             doAsync {
-                                database.Dao().getCliente()
+                                database.Dao().insertClientes(cliente)
                             }
                         }
                     }

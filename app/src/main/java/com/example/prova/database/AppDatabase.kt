@@ -7,7 +7,7 @@ import androidx.room.RoomDatabase
 import com.example.prova.model.Cliente
 
 
-@Database(entities = [Cliente::class], version = 1)
+@Database(entities = [Cliente::class], version = 2)
 abstract class AppDatabase() : RoomDatabase() {
 
     abstract fun Dao(): ClientesDao
