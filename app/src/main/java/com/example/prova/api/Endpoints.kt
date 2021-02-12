@@ -9,4 +9,7 @@ interface Endpoints {
     @GET("cliente")
     fun getClientes(): Call<List<Cliente>>
 
+    @GET("cliente/")
+    suspend fun getClientesFromCoroutine(): ArrayList<Cliente>
+
 }

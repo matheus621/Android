@@ -12,6 +12,7 @@ data class Cliente(
     val codigo: String,
     val razao_social: String,
     val nomeFantasia: String,
+    val cpf: String,
     val cnpj: String,
     val ramo_atividade: String,
     val endereco: String,
