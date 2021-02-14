@@ -26,7 +26,7 @@ class ClientesFragment : Fragment() {
 
         viewModel = ClientesViewModel(requireContext())
 
-       // viewModel = ViewModelProviders.of(this).get(ClientesViewModel::class.java)
+        // viewModel = ViewModelProviders.of(this).get(ClientesViewModel::class.java)
         configuraObserverCliente()
         getClientes()
 
@@ -52,21 +52,26 @@ class ClientesFragment : Fragment() {
         //viewModel.getAllClientes().observe(clientes, observeClienteData)
     }
 
-    fun getClientes(){
+    fun getClientes() {
         viewModel.getAllClientes2();
     }
 
 
-
-    fun configuraObserverCliente(){
+    fun configuraObserverCliente() {
         viewModel.clientes.observe(viewLifecycleOwner, Observer { clientes ->
-              val cliente = clientes.get(0)
-                            textCodigo.text = cliente.codigo
-                txtNomeFantasia.text = cliente.nomeFantasia
-                txtRazaoSocial.text = cliente.razao_social
-                txtEndereco.text = cliente.endereco
-                txtCnpj.text = cliente.cnpj
-                txtRamoAtividade.text = cliente.ramo_atividade
+            val cliente = clientes.get(0)
+            textCodigo.text = cliente.codigo
+            txtNomeFantasia.text = cliente.nomeFantasia
+            txtRazaoSocial.text = cliente.razao_social
+            txtEndereco.text = cliente.endereco
+            txtCnpj.text = cliente.cnpj
+            txtRamoAtividade.text = cliente.ramo_atividade
+            txtTelefone.text = cliente.contatos.telefone
+            txtCelular.text = cliente.contatos.celular
+            txtEmail.text = cliente.contatos.e_mail
+            txtTime.text = cliente.contatos.time
+            txtDataNascimento.text = cliente.contatos.data_nascimento
+            txtConjuge.text = cliente.contatos.conjuge
         })
     }
 

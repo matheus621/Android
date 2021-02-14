@@ -7,6 +7,7 @@ import androidx.lifecycle.*
 import com.example.prototipoprova.repository.ClienteRepository
 import com.example.prova.model.Cliente
 import kotlinx.coroutines.launch
+import timber.log.Timber
 import java.lang.Exception
 
 class ClientesViewModel(context: Context) : ViewModel() {
@@ -30,10 +31,10 @@ class ClientesViewModel(context: Context) : ViewModel() {
 
         try{
             viewModelScope.launch {
-               _clientes.value =  clienteRepository.getClientesFromApi()
+               _clientes.value =  clienteRepository.getClientes()
             }
-        }catch (e: Exception){
-            Log.e("ERRO API", e.message.toString())
+        }catch (e: Exception) {
+            Timber.tag("ERRO API").e(e.message.toString())
 
         }
 

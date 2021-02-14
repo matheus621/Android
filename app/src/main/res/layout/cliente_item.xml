@@ -36,6 +36,7 @@
                 app:layout_constraintHorizontal_bias="0.064"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
+            
 
             <TextView
                 android:id="@+id/textCodigo"
@@ -43,7 +44,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
                 android:text="454545"
-                android:textSize="16sp"
+                android:textSize="14sp"
                 android:textStyle="bold"
                 app:layout_constraintEnd_toEndOf="@+id/textViewDadosCliente"
                 app:layout_constraintHorizontal_bias="0.0"
@@ -76,9 +77,8 @@
                 android:layout_alignParentEnd="true"
                 android:layout_alignParentRight="true"
                 android:layout_marginStart="20dp"
-                android:layout_marginLeft="10dp"
                 android:text="MAXIMA SISTEMAS"
-                android:textSize="18sp"
+                android:textSize="14sp"
                 android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="@+id/textCodigo"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -94,7 +94,7 @@
                 android:layout_below="@id/textCodigo"
                 android:layout_marginTop="8dp"
                 android:text="MAXIMA SISTEMAS"
-                android:textSize="16sp"
+                android:textSize="14sp"
                 app:layout_constraintEnd_toEndOf="@+id/txtRazaoSocial"
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="@+id/textCodigo"
@@ -259,11 +259,10 @@
 
             <TextView
                 android:id="@+id/txtCelular"
-                android:layout_width="82dp"
-                android:layout_height="19dp"
+                android:layout_width="136dp"
+                android:layout_height="21dp"
                 android:layout_marginStart="10dp"
-                android:layout_marginLeft="10dp"
-                android:text="(62)98989989+"
+                android:text="(62) 9 8888-9888"
                 android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="@+id/txtViewCelular"
                 app:layout_constraintStart_toEndOf="@+id/txtViewCelular"
@@ -366,20 +365,19 @@
                 android:id="@+id/txtViewEmail"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="40dp"
-                android:layout_marginLeft="40dp"
+                android:layout_marginStart="44dp"
                 android:text="E-mail: "
                 app:layout_constraintBottom_toBottomOf="@+id/txtTelefone"
                 app:layout_constraintStart_toEndOf="@+id/txtTelefone"
-                app:layout_constraintTop_toTopOf="@+id/txtTelefone" />
+                app:layout_constraintTop_toTopOf="@+id/txtTelefone"
+                app:layout_constraintVertical_bias="0.0" />
 
             <TextView
                 android:id="@+id/txtEmail"
-                android:layout_width="82dp"
-                android:layout_height="19dp"
+                android:layout_width="112dp"
+                android:layout_height="15dp"
                 android:layout_marginStart="10dp"
-                android:layout_marginLeft="10dp"
-                android:text="asdaks@sfkasjdk"
+                android:text="asdaks@sfkasjdkgdfgdfgf"
                 android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="@+id/txtViewEmail"
                 app:layout_constraintStart_toEndOf="@+id/txtViewEmail"
