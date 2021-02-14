@@ -36,7 +36,7 @@
                 app:layout_constraintHorizontal_bias="0.064"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
-            
+
 
             <TextView
                 android:id="@+id/textCodigo"
@@ -259,7 +259,7 @@
 
             <TextView
                 android:id="@+id/txtCelular"
-                android:layout_width="136dp"
+                android:layout_width="116dp"
                 android:layout_height="21dp"
                 android:layout_marginStart="10dp"
                 android:text="(62) 9 8888-9888"
@@ -365,19 +365,20 @@
                 android:id="@+id/txtViewEmail"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="44dp"
+                android:layout_marginStart="24dp"
                 android:text="E-mail: "
                 app:layout_constraintBottom_toBottomOf="@+id/txtTelefone"
                 app:layout_constraintStart_toEndOf="@+id/txtTelefone"
                 app:layout_constraintTop_toTopOf="@+id/txtTelefone"
-                app:layout_constraintVertical_bias="0.0" />
+                app:layout_constraintVertical_bias="1.0" />
 
             <TextView
                 android:id="@+id/txtEmail"
-                android:layout_width="112dp"
-                android:layout_height="15dp"
+                android:layout_width="145dp"
+                android:layout_height="17dp"
                 android:layout_marginStart="10dp"
-                android:text="asdaks@sfkasjdkgdfgdfgf"
+                android:textSize="12sp"
+                android:text="asdaks@sgdfgf.com"
                 android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="@+id/txtViewEmail"
                 app:layout_constraintStart_toEndOf="@+id/txtViewEmail"
