@@ -8,7 +8,7 @@ object ApiService {
 
     private fun getRetrofit() : Retrofit {
         return Retrofit.Builder()
-            .baseUrl("http://192.168.1.4:8080/")
+            .baseUrl("http://192.168.1.5:8080/")
             .addCallAdapterFactory(CoroutineCallAdapterFactory())
             .addConverterFactory(GsonConverterFactory.create())
             .build()

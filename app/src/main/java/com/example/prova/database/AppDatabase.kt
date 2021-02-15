@@ -5,12 +5,14 @@ import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
 import com.example.prova.model.Cliente
+import com.example.prova.model.Pedido
 
 
-@Database(entities = [Cliente::class], version = 2)
+@Database(entities = [Cliente::class, Pedido::class], version = 3)
 abstract class AppDatabase() : RoomDatabase() {
 
     abstract fun Dao(): ClientesDao
+    abstract fun DaoPedido(): PedidoDao
 
     companion object {
         var INSTANCE: AppDatabase? = null

@@ -1,14 +1,12 @@
-package com.example.prototipoprova.repository
+package com.example.prova.repository
 
 import android.content.Context
 import android.os.Handler
 import android.util.Log
 import android.widget.Toast
-import androidx.lifecycle.LiveData
-import androidx.lifecycle.MutableLiveData
 import com.example.prototipoprova.api.ApiService
 import com.example.prova.database.AppDatabase
-import com.example.prova.model.Cliente
+import com.example.prova.model.Pedido
 import com.example.prova.util.Utils
 import org.jetbrains.anko.doAsync
 import retrofit2.Call
@@ -16,18 +14,13 @@ import retrofit2.Callback
 import retrofit2.Response
 import timber.log.Timber
 
-class ClienteRepository(context: Context) {
+class PedidoRepository(context: Context) {
 
     val database = AppDatabase.getInstance(context)
 
-   suspend fun getClientes() : List<Cliente>{
-        return database.Dao().getAllLiveCliente()
+    suspend fun getPedidos(): List<Pedido> {
+        return database.DaoPedido().getAllLivePedido()
     }
-
-//    suspend  fun getClientesFromApi() : ArrayList<Cliente>{
-//        return ApiService.getEndpoints().getClientesFromCoroutine()
-//    }
-
 
 
     fun fetchDataFromServer(context: Context) {
@@ -36,26 +29,26 @@ class ClienteRepository(context: Context) {
         val request = ApiService.getEndpoints()
         if (Utils.isOnline(context)) {
 
-            request.getClientes().enqueue(object : Callback<List<Cliente>> {
+            request.getPedidos().enqueue(object : Callback<List<Pedido>> {
 
-                override fun onFailure(call: Call<List<Cliente>>, t: Throwable) {
+                override fun onFailure(call: Call<List<Pedido>>, t: Throwable) {
                     Log.e("Falha de comunicação", "Falha no request")
                     Toast.makeText(context, "ERRO NA COMUNICAÇÃO", Toast.LENGTH_LONG).show()
                 }
 
                 override fun onResponse(
-                    call: Call<List<Cliente>>,
-                    response: Response<List<Cliente>>
+                    call: Call<List<Pedido>>,
+                    response: Response<List<Pedido>>
                 ) {
 
 
                     if (response.code() == 200) {
                         Timber.d("${response.body()}")
                         val resultado = response.body()
-                        resultado?.let { cliente ->
-                            cliente.forEach {
+                        resultado?.let { pedido ->
+                            pedido.forEach {
                                 doAsync {
-                                    database.Dao().insertClientes(cliente)
+                                    database.DaoPedido().insertPedido(pedido)
                                 }
                             }
                         }
