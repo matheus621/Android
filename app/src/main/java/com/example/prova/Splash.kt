@@ -24,6 +24,8 @@ class Splash : AppCompatActivity() {
         }, 4000)
 
 
+
+
     }
 
 }

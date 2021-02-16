@@ -27,7 +27,7 @@ class ClientesViewModel(context: Context) : ViewModel() {
 
     //fun getAllClientes() = clienteRepository.getAllClientes()
 
-    fun getAllClientes2(){
+    fun getAllClientes(){
 
         try{
             viewModelScope.launch {

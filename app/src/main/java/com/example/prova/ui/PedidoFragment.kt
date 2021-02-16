@@ -12,7 +12,7 @@ import com.example.prova.model.Cliente
 import kotlinx.android.synthetic.main.cliente_item.*
 import java.lang.Exception
 
-class ClientesFragment : Fragment() {
+class PedidoFragment : Fragment() {
 
     private lateinit var viewModel: ClientesViewModel
 
