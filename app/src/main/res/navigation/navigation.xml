@@ -12,10 +12,19 @@
         <action
             android:id="@+id/action_mainFragment_to_clienteFullFragment"
             app:destination="@id/clienteFullFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_pedidoFragment"
+            app:destination="@id/pedidoFragment" />
     </fragment>
     <fragment
         android:id="@+id/clienteFullFragment"
         android:name="com.example.prova.ui.ClientesFragment"
         android:label="Dados do cliente"
         tools:layout="@layout/cliente_fragment" />
+
+    <fragment
+        android:id="@+id/pedidoFragment"
+        android:name="com.example.prova.ui.PedidoFragment"
+        android:label="Pedidos"
+        tools:layout="@layout/pedido_fragment" />
 </navigation>

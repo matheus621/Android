@@ -25,6 +25,10 @@ class MainFragment : Fragment() {
         cardViewCliente.setOnClickListener {
             it.findNavController().navigate(R.id.action_mainFragment_to_clienteFullFragment)
         }
+
+        cardViewPedidos.setOnClickListener {
+            it.findNavController().navigate(R.id.action_mainFragment_to_pedidoFragment)
+        }
     }
 
 

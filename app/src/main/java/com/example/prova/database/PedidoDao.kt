@@ -17,7 +17,7 @@ interface PedidoDao {
     suspend fun getAllLivePedido(): List<Pedido>
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
-    fun insertPedido(pedido: List<Pedido>)
+    fun insertPedido(pedidos: List<Pedido>)
 
     @Query("SELECT * FROM PEDIDOS WHERE ID = :id")
     fun getSimplePedido(id: Int) : LiveData<Pedido>
