@@ -12,29 +12,30 @@ import kotlinx.coroutines.launch
 import timber.log.Timber
 import java.lang.Exception
 
-class PedidoViewModel(context: Context) : ViewModel() {
+class PedidoViewModel(application: Application) : AndroidViewModel(application) {
 
-    private val pedidoRepository = PedidoRepository(context)
+    private val pedidoRepository = PedidoRepository(application)
 
-    private val _pedidos = MutableLiveData<List<Pedido>>()
-    var pedidos: LiveData<List<Pedido>> = _pedidos
+//    private val _pedidos = MutableLiveData<List<Pedido>>()
+//    var pedidos: LiveData<List<Pedido>> = _pedidos
 
     init {
-        pedidoRepository.fetchDataFromServer(context)
+        pedidoRepository.fetchDataFromServer(application)
     }
 
-    fun getAllPedidos() {
+    fun getAllPedidos() = pedidoRepository.getAllPedidos()
 
-        try {
-            viewModelScope.launch {
-                _pedidos.value = pedidoRepository.getPedidos()
-            }
-        } catch (e: Exception) {
-            Timber.tag("ERRO API").e(e.message.toString())
-
-        }
-
-    }
+//    fun getAllPedidos() {
+//
+//        try {
+//            pedidos = pedidoRepository.getPedidos()
+//
+//        } catch (e: Exception) {
+//            Timber.tag("ERRO API").e(e.message.toString())
+//
+//        }
+//
+//    }
 
 
 }

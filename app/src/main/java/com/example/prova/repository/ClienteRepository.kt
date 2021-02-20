@@ -20,14 +20,13 @@ class ClienteRepository(context: Context) {
 
     val database = AppDatabase.getInstance(context)
 
-   suspend fun getClientes() : List<Cliente>{
+    suspend fun getClientes(): List<Cliente> {
         return database.Dao().getAllLiveCliente()
     }
 
 //    suspend  fun getClientesFromApi() : ArrayList<Cliente>{
 //        return ApiService.getEndpoints().getClientesFromCoroutine()
 //    }
-
 
 
     fun fetchDataFromServer(context: Context) {
@@ -55,9 +54,10 @@ class ClienteRepository(context: Context) {
                         resultado?.let { cliente ->
                             cliente.forEach {
                                 doAsync {
-                                    database.Dao().insertClientes(cliente)
+                                    database.Dao().insertClientes(it)
                                 }
                             }
+
                         }
                     } else {
                         Toast.makeText(context, "VOCÊ ESTÁ SEM INTERNET", Toast.LENGTH_LONG).show()

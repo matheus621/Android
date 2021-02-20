@@ -1,15 +1,16 @@
 package com.example.prova.ui
 
+import android.app.Application
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Toast
 import androidx.lifecycle.*
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.prova.R
-import kotlinx.android.synthetic.main.pedido_item.*
-import java.lang.Exception
+import com.example.prova.commons.Adapter
+import kotlinx.android.synthetic.main.pedido_fragment.*
 
 class PedidoFragment : Fragment() {
 
@@ -19,41 +20,52 @@ class PedidoFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        return inflater.inflate(R.layout.pedido_item, container, false)
+        return inflater.inflate(R.layout.pedido_fragment, container, false)
     }
 
     override fun onResume() {
         super.onResume()
 
-        viewModel = PedidoViewModel(requireContext())
-
-        try {
-            configuraObserverPedido()
-            getPedidos()
-        } catch (e: Exception) {
-            Toast.makeText(context, "Erro na aplicação", Toast.LENGTH_LONG).show()
-        }
-
-    }
-
-    fun getPedidos() {
-        viewModel.getAllPedidos();
-    }
+        viewModel = ViewModelProvider(this).get(PedidoViewModel::class.java)
 
 
-    fun configuraObserverPedido() {
-        viewModel.pedidos.observe(viewLifecycleOwner, Observer { pedidos ->
-
-            val pedido = pedidos.get(0)
-
-            if (pedidos != null) {
-                textViewNumPedErp.text = pedido.numPedERP
-                textViewNumPedRca.text = pedido.numPedRca
-                textViewClienteName.text = pedido.cliente
-            }
+        viewModel.getAllPedidos().observe(this, Observer { pedidos ->
+            recyclerView.adapter = Adapter(pedidos)
+            recyclerView.layoutManager = LinearLayoutManager(this.context)
         })
-    }
 
+//        viewModel = PedidoViewModel(requireContext())
+//
+//        try {
+//            configuraObserverPedido()
+//            getPedidos()
+//        } catch (e: Exception) {
+//            Toast.makeText(context, "Erro na aplicação", Toast.LENGTH_LONG).show()
+//        }
+//
+//    }
+//
+//    fun getPedidos() {
+//        viewModel.getAllPedidos()
+//    }
+
+
+//    fun configuraObserverPedido() {
+//        viewModel.pedidos.observe(viewLifecycleOwner, Observer { pedidos ->
+//
+//            pedidos.forEach { pedido ->
+//                if (pedido != null) {
+//                    textViewNumPedErp.text = pedido.numPedERP
+//                    textViewNumPedRca.text = pedido.numPedRca
+//                    textViewClienteName.text = pedido.cliente
+//                }
+//            }
+//
+//        })
+//    }
+
+
+    }
 }
 
 

@@ -18,10 +18,7 @@ class PedidoRepository(context: Context) {
 
     val database = AppDatabase.getInstance(context)
 
-    suspend fun getPedidos(): List<Pedido> {
-        return database.DaoPedido().getAllLivePedido()
-    }
-
+    fun getAllPedidos() = database.DaoPedido().getAllLivePedido()
 
     fun fetchDataFromServer(context: Context) {
 
@@ -45,10 +42,10 @@ class PedidoRepository(context: Context) {
                     if (response.code() == 200) {
                         Timber.d("${response.body()}")
                         val resultado = response.body()
-                        resultado?.let { pedido ->
-                            pedido.forEach {
+                        resultado?.let { pedidos ->
+                            pedidos.forEach {
                                 doAsync {
-                                    database.DaoPedido().insertPedido(pedido)
+                                    database.DaoPedido().insertPedido(it)
                                 }
                             }
                         }

@@ -14,11 +14,14 @@ interface PedidoDao {
     fun getPedido(): Pedido
 
     @Query("SELECT * FROM PEDIDOS")
-    suspend fun getAllLivePedido(): List<Pedido>
+    fun getAllLivePedido(): LiveData<List<Pedido>>
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
-    fun insertPedido(pedidos: List<Pedido>)
+    fun insertPedido(pedidos: Pedido)
+
+//    @Insert(onConflict = OnConflictStrategy.REPLACE)
+//    fun insertPedidoList(pedidos: List<Pedido>)
 
     @Query("SELECT * FROM PEDIDOS WHERE ID = :id")
-    fun getSimplePedido(id: Int) : LiveData<Pedido>
+    fun getSimplePedido(id: Int): LiveData<Pedido>
 }

@@ -17,7 +17,7 @@ interface ClientesDao {
     suspend fun getAllLiveCliente(): List<Cliente>
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
-    fun insertClientes(cliente: List<Cliente>)
+    fun insertClientes(cliente: Cliente)
 
     @Query("SELECT * FROM CLIENTES WHERE ID = :id")
     fun getSimpleCliente(id: Int) : LiveData<Cliente>
