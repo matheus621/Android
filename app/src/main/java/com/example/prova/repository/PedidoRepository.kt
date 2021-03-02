@@ -37,8 +37,6 @@ class PedidoRepository(context: Context) {
                     call: Call<List<Pedido>>,
                     response: Response<List<Pedido>>
                 ) {
-
-
                     if (response.code() == 200) {
                         Timber.d("${response.body()}")
                         val resultado = response.body()
