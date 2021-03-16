@@ -13,8 +13,17 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-        tools:layout_editor_absoluteX="85dp"
-        tools:layout_editor_absoluteY="144dp"
-        tools:listitem="@layout/cliente_item"/>
+        tools:layout_editor_absoluteX="129dp"
+        tools:layout_editor_absoluteY="-281dp"
+        tools:listitem="@layout/cliente_item" />
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_nav"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/design_default_color_background"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:menu="@menu/activity_main_bottom_actions" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
