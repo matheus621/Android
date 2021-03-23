@@ -8,7 +8,7 @@ object ApiService {
 
     private fun getRetrofit() : Retrofit {
         return Retrofit.Builder()
-            .baseUrl("http://192.168.1.2:8080/")
+            .baseUrl("https://provaws.herokuapp.com/")
             .addCallAdapterFactory(CoroutineCallAdapterFactory())
             .addConverterFactory(GsonConverterFactory.create())
             .build()
