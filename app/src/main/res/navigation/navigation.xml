@@ -26,5 +26,9 @@
         android:id="@+id/pedidoFragment"
         android:name="com.example.prova.ui.PedidoFragment"
         android:label="Pedidos"
-        tools:layout="@layout/pedido_fragment" />
+        tools:layout="@layout/pedido_fragment" >
+        <action
+            android:id="@+id/action_pedidoFragment_to_clienteFullFragment"
+            app:destination="@id/clienteFullFragment" />
+    </fragment>
 </navigation>

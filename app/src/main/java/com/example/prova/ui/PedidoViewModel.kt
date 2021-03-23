@@ -16,26 +16,11 @@ class PedidoViewModel(application: Application) : AndroidViewModel(application) 
 
     private val pedidoRepository = PedidoRepository(application)
 
-//    private val _pedidos = MutableLiveData<List<Pedido>>()
-//    var pedidos: LiveData<List<Pedido>> = _pedidos
-
     init {
         pedidoRepository.fetchDataFromServer(application)
     }
 
     fun getAllPedidos() = pedidoRepository.getAllPedidos()
-
-//    fun getAllPedidos() {
-//
-//        try {
-//            pedidos = pedidoRepository.getPedidos()
-//
-//        } catch (e: Exception) {
-//            Timber.tag("ERRO API").e(e.message.toString())
-//
-//        }
-//
-//    }
 
 
 }

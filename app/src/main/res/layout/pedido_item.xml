@@ -23,12 +23,15 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent">
 
-            <ImageView
-                android:id="@+id/imgPed2"
+            <TextView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_marginStart="10dp"
+                android:background="@color/colorPendente"
+                android:gravity="center"
                 android:src="@drawable/ic_launcher_background"
+                android:text="P"
+                android:textColor="@color/design_default_color_background"
+                android:textSize="32sp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintCircleRadius="16dp"
                 app:layout_constraintEnd_toStartOf="@+id/textViewCliente"
@@ -42,7 +45,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="10dp"
-            android:layout_marginTop="4dp"
+            android:layout_marginTop="10dp"
             android:text="Nº Ped. RCA/ERP:"
             android:textSize="12sp"
             app:layout_constraintBottom_toTopOf="@+id/cardViewImg"

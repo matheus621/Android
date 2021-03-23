@@ -34,36 +34,6 @@ class PedidoFragment : Fragment() {
             recyclerView.layoutManager = LinearLayoutManager(this.context)
         })
 
-//        viewModel = PedidoViewModel(requireContext())
-//
-//        try {
-//            configuraObserverPedido()
-//            getPedidos()
-//        } catch (e: Exception) {
-//            Toast.makeText(context, "Erro na aplicação", Toast.LENGTH_LONG).show()
-//        }
-//
-//    }
-//
-//    fun getPedidos() {
-//        viewModel.getAllPedidos()
-//    }
-
-
-//    fun configuraObserverPedido() {
-//        viewModel.pedidos.observe(viewLifecycleOwner, Observer { pedidos ->
-//
-//            pedidos.forEach { pedido ->
-//                if (pedido != null) {
-//                    textViewNumPedErp.text = pedido.numPedERP
-//                    textViewNumPedRca.text = pedido.numPedRca
-//                    textViewClienteName.text = pedido.cliente
-//                }
-//            }
-//
-//        })
-//    }
-
 
     }
 }

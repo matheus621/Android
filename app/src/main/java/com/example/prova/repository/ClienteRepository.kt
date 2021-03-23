@@ -24,11 +24,6 @@ class ClienteRepository(context: Context) {
         return database.Dao().getAllLiveCliente()
     }
 
-//    suspend  fun getClientesFromApi() : ArrayList<Cliente>{
-//        return ApiService.getEndpoints().getClientesFromCoroutine()
-//    }
-
-
     fun fetchDataFromServer(context: Context) {
 
         Timber.plant(Timber.DebugTree())
@@ -40,6 +35,7 @@ class ClienteRepository(context: Context) {
                 override fun onFailure(call: Call<List<Cliente>>, t: Throwable) {
                     Log.e("Falha de comunicação", "Falha no request")
                     Toast.makeText(context, "ERRO NA COMUNICAÇÃO", Toast.LENGTH_LONG).show()
+
                 }
 
                 override fun onResponse(

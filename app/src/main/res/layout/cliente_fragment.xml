@@ -5,25 +5,33 @@
     android:id="@+id/listclientes"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.ClientesFragment"
-    android:background="#F1ECEC">
+    android:background="#F1ECEC"
+    tools:context=".ui.ClientesFragment">
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-        tools:layout_editor_absoluteX="129dp"
-        tools:layout_editor_absoluteY="-281dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
         tools:listitem="@layout/cliente_item" />
 
-    <com.google.android.material.bottomnavigation.BottomNavigationView
-        android:id="@+id/bottom_nav"
-        android:layout_width="match_parent"
+    <LinearLayout
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="@color/design_default_color_background"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:menu="@menu/activity_main_bottom_actions" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:background="@color/design_default_color_background"
+            android:id="@+id/bottom_nav_cliente"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:menu="@menu/activity_main_bottom_actions" />
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

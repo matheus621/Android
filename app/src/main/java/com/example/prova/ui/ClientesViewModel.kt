@@ -15,47 +15,24 @@ class ClientesViewModel(context: Context) : ViewModel() {
     private val clienteRepository = ClienteRepository(context)
 
     private val _clientes = MutableLiveData<List<Cliente>>()
-    var clientes : LiveData<List<Cliente>> = _clientes
+    var clientes: LiveData<List<Cliente>> = _clientes
 
     init {
         clienteRepository.fetchDataFromServer(context)
     }
 
-//    fun setCurrentClienteSelected(id: Int) {
-//        clienteRepository.setCurrentClienteSelected(id)
-//    }
+    fun getAllClientes() {
 
-    //fun getAllClientes() = clienteRepository.getAllClientes()
-
-    fun getAllClientes(){
-
-        try{
+        try {
             viewModelScope.launch {
-               _clientes.value =  clienteRepository.getClientes()
+                _clientes.value = clienteRepository.getClientes()
             }
-        }catch (e: Exception) {
+        } catch (e: Exception) {
             Timber.tag("ERRO API").e(e.message.toString())
 
         }
 
     }
-
-
-//    fun getAllClientes2Api(){
-//
-//        try{
-//            viewModelScope.launch {
-//                _clientes.value =  clienteRepository.getClientesFromApi()
-//            }
-//        }catch (e: Exception){
-//            Log.e("ERRO API", e.message.toString())
-//
-//        }
-//
-//    }
-    //fun getClienteLiveData() = clienteRepository.getSingleClienteDetails(getAllClientes())
-
-
 
 
 }

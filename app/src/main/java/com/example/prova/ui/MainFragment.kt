@@ -7,7 +7,9 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.navigation.findNavController
 import com.example.prova.R
+import kotlinx.android.synthetic.main.cliente_fragment.*
 import kotlinx.android.synthetic.main.main_fragment.*
+import kotlinx.android.synthetic.main.pedido_fragment.*
 
 class MainFragment : Fragment() {
 
@@ -29,6 +31,7 @@ class MainFragment : Fragment() {
         cardViewPedidos.setOnClickListener {
             it.findNavController().navigate(R.id.action_mainFragment_to_pedidoFragment)
         }
+
     }
 
 
