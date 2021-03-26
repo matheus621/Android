@@ -19,19 +19,4 @@
         app:layout_constraintTop_toTopOf="parent"
         tools:listitem="@layout/cliente_item" />
 
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent">
-
-        <com.google.android.material.bottomnavigation.BottomNavigationView
-            android:background="@color/design_default_color_background"
-            android:id="@+id/bottom_nav_cliente"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:menu="@menu/activity_main_bottom_actions" />
-    </LinearLayout>
-
 </androidx.constraintlayout.widget.ConstraintLayout>

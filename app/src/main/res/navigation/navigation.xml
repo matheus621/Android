@@ -20,7 +20,11 @@
         android:id="@+id/clienteFullFragment"
         android:name="com.example.prova.ui.ClientesFragment"
         android:label="Dados do cliente"
-        tools:layout="@layout/cliente_fragment" />
+        tools:layout="@layout/cliente_fragment" >
+        <action
+            android:id="@+id/action_clienteFullFragment_to_pedidoFragment"
+            app:destination="@id/pedidoFragment" />
+    </fragment>
 
     <fragment
         android:id="@+id/pedidoFragment"
